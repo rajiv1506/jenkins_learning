@@ -1,4 +1,5 @@
 @Library('shared-library') _
+
 pipeline {
   agent {
     docker { image 'node:16-alpine' }
@@ -10,10 +11,12 @@ pipeline {
       }
     }
     stage('Random') {
-        steps {
-            def utils = new my_playground.example.Utils()
-            echo myVariable
+      steps {
+        script {
+          def utils = new my_playground.example.Utils()
+          echo utils.myVariable
         }
-        }
+      }
     }
+  }
 }
