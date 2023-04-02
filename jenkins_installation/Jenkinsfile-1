@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Random') {
             steps {
-                com.example.Utils.myfunction()
+                def utils = new my_playground.example.Utils()
                 echo myVariable
             }
         }
