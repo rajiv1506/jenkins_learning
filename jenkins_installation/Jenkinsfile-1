@@ -10,10 +10,10 @@ pipeline {
       }
     }
     stage('Random') {
-            steps {
-                def utils = new my_playground.example.Utils()
-                echo myVariable
-            }
+        steps {
+            def utils = new my_playground.example.Utils()
+            echo myVariable
+        }
         }
     }
 }
