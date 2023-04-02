@@ -12,7 +12,7 @@ pipeline {
     stage('Random Number') {
             steps {
                 script {
-                    def utils = new com.my_playground.example.Utils()
+                    def utils = new my_playground.example.Utils()
                     echo "Random Number: ${utils.getRandomNumber()}"
                 }
             }
