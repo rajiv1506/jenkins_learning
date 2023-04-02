@@ -9,12 +9,10 @@ pipeline {
         sh 'node --version'
       }
     }
-    stage('Random Number') {
+    stage('Random') {
             steps {
-                script {
-                    def utils = new my_playground.example.Utils()
-                    echo "Random Number: ${utils.getRandomNumber()}"
-                }
+                com.example.Utils.myfunction()
+                echo myVariable
             }
         }
     }
