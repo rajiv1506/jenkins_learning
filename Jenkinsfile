@@ -1,4 +1,4 @@
-@Library('shared-library') _
+@Library('shared-library@main') _
 
 import my_playground.example.Utils
 
