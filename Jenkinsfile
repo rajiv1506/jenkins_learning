@@ -14,5 +14,13 @@ pipeline {
                 }
             }
         }
+        stage('Clone'){
+            steps {
+                script {
+                    def utils = new Utils(this)
+                    utils.cloneRepo('https://github.com/rajiv1506/terraform.git')
+                }
+            }
+        }
     }
 }
