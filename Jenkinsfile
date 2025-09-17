@@ -22,5 +22,13 @@ pipeline {
                 }
             }
         }
+        stage('Another Clone'){
+            steps {
+                script {
+                    def utils = new Utils(this)
+                    utils.anotherclone('https://github.com/rajiv1506/terraform.git')
+                }
+            }
+        }
     }
 }
