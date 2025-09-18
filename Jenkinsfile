@@ -6,19 +6,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Print Date') {
-            steps {
-                script {
-                    def utils = new Utils(this)
-                    utils.printDate()
-                }
-            }
-        }
         stage('Clone'){
             steps {
                 script {
                     def utils = new Utils(this)
-                    utils.cloneRepo('https://github.com/rajiv1506/terraform.git')
+                    utils.printDate()
+                    utils.cloneRepo('https://github.com/rajiv1506/java.git')
+                    utils.printDate()
                 }
             }
         }
