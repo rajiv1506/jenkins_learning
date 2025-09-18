@@ -10,9 +10,11 @@ pipeline {
             steps {
                 script {
                     def utils = new Utils(this)
-                    utils.printDate()
+                    def start_time = utils.printDate()
                     utils.cloneRepo('https://github.com/rajiv1506/java.git')
-                    utils.printDate()
+                    def end_time = utils.printDate()
+                    def time = end_time - start_time
+                    echo "Time taken: ${time}ms"
                 }
             }
         }
